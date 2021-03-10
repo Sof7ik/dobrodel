@@ -1,0 +1,37 @@
+header
+{
+    background-color: #fff;
+
+    padding: 15px;
+}
+
+header .container-1440
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a.logo
+{
+    display: block;
+}
+
+a.logo img
+{
+    display: block;
+    width: 100px;
+}
+
+h1.header-name
+{
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+p.header-desc
+{
+    font-size: 25px;
+    text-align: center;
+}
