@@ -1,0 +1,41 @@
+footer
+{
+    background-color: #212121;
+
+    padding: 40px 0;
+
+    color: #fff;
+}
+
+div.contacts-list
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    margin-top: 60px;
+}
+
+a.contact
+{
+    display: block;
+
+    width: max-content;
+    margin: 0 auto 20px;
+}
+
+a.contact img
+{
+    display: block;
+    width: 100px;
+}
+
+a.contact-text
+{
+    display: block;
+    text-align: center;
+    font-size: 16px;
+
+    color: #fff;
+}

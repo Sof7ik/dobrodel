@@ -9,7 +9,7 @@ header .container-1440
 {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 

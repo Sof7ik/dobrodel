@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/components/header.css">
     <link rel="stylesheet" href="/components/footer.css">
 
-    <link rel="stylesheet" href="assets/styles/mainpage.css">
+    <link rel="stylesheet" href="/assets/styles/mainpage.css">
 </head>
 <body>
 
@@ -61,7 +61,7 @@
     <div class="container-1440">
         <h2 class="section-title">Сообщите нам</h2>
 
-        <p class="section-desc">Как нам сообщить о проблеме? Прочитайте инструкцию нижу и Вы всё поймёте!)</p>
+        <p class="section-desc">Как нам сообщить о проблеме? Прочитайте инструкцию ниже и Вы всё поймёте!)</p>
 
         <div class="how-to-message-us">
             <div class="how-to-mess-item">
@@ -86,6 +86,94 @@
     </div>
 </article>
 
+<article class="last-dones">
+    <div class="container-1440">
+        <h2 class="section-title">Последние добрые дела</h2>
+
+        <p class="section-desc">
+            Мы ежедневно выполняем от 10 до 25 добрых дел в различных видах деятельности - уборка
+            дорог, мусора, покарска стен и бордюров, ремонт фонарных столбов и много-много других. Познакомьтесь с нашими
+            последними добрыми делами
+        </p>
+
+        <div class="last-dones-list">
+            <div class="last-done">
+                <div class="last-done-image" style="background-image: url('https://flot.gazprom.ru/d/textpage/80/128/img_5730.jpg');">
+                    <img
+                            src="https://lh3.googleusercontent.com/proxy/nJKXs67ePXB9TIH9YDJ30TaIo22HsbmWvGp1-7_llMLXPAzlQBpmoOeEtflc_NhEoQjBCRHx_-Qq6DaXz7lVfC5VzJlf-Jc-x6JmFh_TFCCXJYrOjFjk3aY6FG8g6xo2e-uu0RxhowWKk8k-YlLJgEngu5A"
+                            alt=""
+                            class="last-done-before"
+                    >
+                </div>
+
+                <div class="texts">
+                    <h3 class="last-done-name">Название заявки</h3>
+
+                    <div class="date-category">
+                        <span class="date-category">20.12.2020</span>
+                        <span class="date-category">Уборка мусора</span>
+                    </div>
+
+                    <p class="last-done-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    </p>
+                </div>
+            </div>
+
+            <div class="last-done reversed">
+                <div class="last-done-image" style="background-image: url('https://flot.gazprom.ru/d/textpage/80/128/img_5730.jpg');">
+                    <img
+                            src="https://lh3.googleusercontent.com/proxy/nJKXs67ePXB9TIH9YDJ30TaIo22HsbmWvGp1-7_llMLXPAzlQBpmoOeEtflc_NhEoQjBCRHx_-Qq6DaXz7lVfC5VzJlf-Jc-x6JmFh_TFCCXJYrOjFjk3aY6FG8g6xo2e-uu0RxhowWKk8k-YlLJgEngu5A"
+                            alt=""
+                            class="last-done-before"
+                    >
+                </div>
+
+                <div class="texts">
+                    <h3 class="last-done-name">Название заявки</h3>
+
+                    <div class="date-category">
+                        <span class="date-category">20.12.2020</span>
+                        <span class="date-category">Уборка мусора</span>
+                    </div>
+
+                    <p class="last-done-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    </p>
+                </div>
+            </div>
+
+            <div class="last-done">
+                <div class="last-done-image" style="background-image: url('https://flot.gazprom.ru/d/textpage/80/128/img_5730.jpg');">
+                    <img
+                            src="https://lh3.googleusercontent.com/proxy/nJKXs67ePXB9TIH9YDJ30TaIo22HsbmWvGp1-7_llMLXPAzlQBpmoOeEtflc_NhEoQjBCRHx_-Qq6DaXz7lVfC5VzJlf-Jc-x6JmFh_TFCCXJYrOjFjk3aY6FG8g6xo2e-uu0RxhowWKk8k-YlLJgEngu5A"
+                            alt=""
+                            class="last-done-before"
+                    >
+                </div>
+
+                <div class="texts">
+                    <h3 class="last-done-name">Название заявки</h3>
+
+                    <div class="date-category">
+                        <span class="date-category">20.12.2020</span>
+                        <span class="date-category">Уборка мусора</span>
+                    </div>
+
+                    <p class="last-done-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
 
 <? include __DIR__ . '/components/footer.php'; ?>
 </body>
