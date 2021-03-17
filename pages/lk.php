@@ -21,30 +21,35 @@
     <?
         include dirname(__DIR__) . '/components/header.php';
         $userRole = unserialize($_COOKIE['user'])['role'];
+        $userName = unserialize($_COOKIE['user'])['fio'];
     ?>
 
     <main>
 
         <div class="bar">
-            <p class="user-role">Администратор</p>
+            <div class="bar-container">
+                <p class="user-role"> 
+                    <?= $userName ?>
+                </p>
 
-            <nav class="bar__navigation">
-                <?
-                if ($userRole === 1)
-                {?>
-                    <a href="/pages/requests.php" class="bar-navigation__item">Заявки</a>
-                    <a href="/pages/requests.php" class="bar-navigation__item">Категории</a>
-                <?}
-                else if ($userRole === 2)
-                {?>
-                    <a href="/pages/requests.php" class="bar-navigation__item">Заявки 1</a>
-                    <a href="/pages/requests.php" class="bar-navigation__item">Категории 2</a>
-                <?}
-                ?>
+                <nav class="bar__navigation">
+                    <?
+                    if ($userRole === 0)
+                    {?>
+                        <a href="/pages/requests.php" class="bar-navigation__item">Заявки</a>
+                        <a href="/pages/requests.php" class="bar-navigation__item">Категории</a>
+                    <?}
+                    else if ($userRole === 1)
+                    {?>
+                        <a href="/pages/requests.php" class="bar-navigation__item">Заявки 1</a>
+                        <a href="/pages/requests.php" class="bar-navigation__item">Категории 2</a>
+                    <?}
+                    ?>
 
-            </nav>
+                </nav>
 
-            <a href="/logout.php" class="logout">ВЫХОД</a>
+                <a href="/logout.php" class="logout">ВЫХОД</a>
+            </div>
         </div>
     <?
         if ($userRole === 1)

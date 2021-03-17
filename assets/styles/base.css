@@ -81,6 +81,12 @@ p.section-desc
 {
     padding: 15px;
     background-color: #222;
+}
+
+.bar-container
+{
+    max-width: 1440px;
+    margin: 0 auto;
 
     display: flex;
     flex-flow: row wrap;
