@@ -3,7 +3,7 @@
 require './connection.php';
 
 $login = $_POST['user-login'];
-$password = $_POST['user-pass'];
+$password = $_POST['user-password'];
 
 if ($result = mysqli_query($link, "SELECT `id`, `fio`, `password`, `role` FROM `users` WHERE `login` = '$login'"))
 {
@@ -12,6 +12,7 @@ if ($result = mysqli_query($link, "SELECT `id`, `fio`, `password`, `role` FROM `
 else
 {
     echo mysqli_error($link);
+    // setcookie('errors', serialize(['message' => 'Неправильный логин']));
 }
 
 
@@ -22,13 +23,19 @@ if (!empty($existUser))
             'user', 
             serialize(
                 [
-                    'id' => $existUser['id'], 
+                    'id' => $existUser['id'],
+                    'fio' => $existUser['fio'],
                     'role' => $existUser['role']
                 ]),
             time()+86400,
             '/'
         );
+
+        header('Location: /pages/lk.php');
     }
-    
-    header('Location: /pages/lk.php');
+    else
+    {
+        echo 'Пароль не тот';
+        // setcookie('errors', serialize(['message' => 'Неправильный пароль']));
+    }
 }

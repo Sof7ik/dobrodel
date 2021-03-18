@@ -20,8 +20,8 @@
 <section class="reg-section">
     <div class="container-1440">
         <div class="buttons">
-            <a href="/pages/auth.php" class="reg-button">регистрация</a>
-            <a href="/pages/reg.php" class="reg-button green-btn">войти</a>
+            <a href="/pages/reg.php" class="reg-button">регистрация</a>
+            <a href="/pages/auth.php" class="reg-button green-btn">войти</a>
         </div>
     </div>
 </section>
