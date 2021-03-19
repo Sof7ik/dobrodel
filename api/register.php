@@ -12,17 +12,16 @@ $login = trim(explode(';', $login)[0]);
 $pass = trim(explode(';', $pass)[0]);
 $email = trim(explode(';', $email)[0]);
 
-echo 'fio '.$fio.'; login '.$login.'; pass '.$pass;
-
 if ($fio !== '' && $login !== '' && $pass !== '')
 {
-    $result = mysqli_query($link, "INSERT INTO `users` (id, fio, login, email, password, role) VALUES(NULL, $fio, $login, $email, $pass, 1)");
+    $result = mysqli_query($link, "INSERT INTO `users` (id, fio, login, email, password, role) VALUES(NULL, '$fio', '$login', '$email', '$pass', 0)");
     if ($result)
     {
-        header('Location: /');
+        header('Location: /pages/auth.php');
     }
     else
     {
+        echo mysqli_error($link);
         setcookie('errors', serialize(['message' => 'Не удалось зарегистрировать нового пользователя']), time()+86000,
             '/');
     }

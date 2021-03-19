@@ -49,7 +49,7 @@
     <div class="create-request-wrapper" id='create-wrapper'>
         <h2 class="article-subtitle">Создать заявку</h2>
 
-        <form action="/api/create-request.php">
+        <form action="/api/create-request.php" method="POST" enctype="multipart/form-data">
             <div class='fields'>
                 <!-- <div class="form__left"> -->
                     <div class="input-wrapper">
@@ -58,8 +58,8 @@
                     </div>
 
                     <div class="input-wrapper">
-                        <label for="request-name" class="text-label">Описание</label>
-                        <textarea name="request-name" id="request-name" placeholder="Введите описание заявки"></textarea>
+                        <label for="request-desc" class="text-label">Описание</label>
+                        <textarea name="request-desc" id="request-desc" placeholder="Введите описание заявки"></textarea>
                     </div>
 
                     <div class="input-wrapper">
@@ -80,7 +80,8 @@
                     <div class="input-wrapper">
                         <label for="request-image" class="text-label">Изображение</label>
                         <label for="request-image" class="request-image-select-btn">Обзор</label>
-                        <input type="file" name="request-image" id="request-image" accept="image/*" max-size="">
+                        <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                        <input type="file" name="request-image" id="request-image" accept="image/*">
                     </div>
                 <!-- </div> -->
             </div>

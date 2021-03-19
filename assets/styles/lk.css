@@ -3,7 +3,7 @@ body
 	background-color: #F6F6F6;
 }
 
-div.request-item
+div.admin-request-item
 {
 	display: flex;
 	flex-flow: row nowrap;
@@ -15,35 +15,35 @@ div.request-item
 	padding: 10px;
 }
 
-div.request-item.green
+div.admin-request-item.green
 {
 	background-color: #e4fdf9;
 }
 
-img.request-photo
+img.admin-request-photo
 {
 	width: 246px;
 }
 
-div.request-photo
+div.admin-request-photo
 {
 	width: 246px;
 	height: 172px;
 	background-color: #000;
 }
 
-img.request-photo,
-div.request-photo
+img.admin-request-photo,
+div.admin-request-photo
 {
 	margin-right: 20px;
 }
 
-div.request-texts
+div.admin-request-texts
 {
 	max-width: 468px;
 }
 
-div.date-category
+div.admin-date-category
 {
 	width: 100%;
 	display: flex;
@@ -53,7 +53,7 @@ div.date-category
 	margin: 10px 0;
 }
 
-p.request-desc
+p.admin-request-desc
 {
 	line-height: 25px;
 }
@@ -223,6 +223,7 @@ button#create-request
 button#create-request:hover
 {
 	border-bottom: 1px solid #0861CA;
+	cursor: pointer;
 }
 
 div.create-request-wrapper
@@ -359,14 +360,15 @@ button.delete-item
 	border-radius: 5px;
 
 	padding: 7px 35px;
-	color: #d6d6d6;
+	/* color: #d6d6d6; */
+	color: #000;
 
-	transition: color .3s, background-color .3s;
+	transition: background-color .3s;
 }
 
 button.delete-item:hover
 {
-	color: #000;
+	/* color: #000; */
 	background-color: #d6d6d6;
 	cursor: pointer;
 }

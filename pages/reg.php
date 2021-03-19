@@ -44,7 +44,7 @@
                 name="user-login"
                 id="login"
                 placeholder="Введите логин"
-                pattern="[A-Za-z]"
+                pattern="^[A-Za-z]+$"
                 required>
         <input
                 class="text-input"

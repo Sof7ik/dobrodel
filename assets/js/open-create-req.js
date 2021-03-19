@@ -1,34 +1,35 @@
 document.addEventListener('DOMContentLoaded', e => {
-    function openWrapper(e, wrapperToOpen)
+    function openWrapper(e)
     {
-        console.log(e.currentTarget);
+        console.log('Кнопка', e.currentTarget);
 
-        function closeWrapper(e, wrapper)
-        {
-            wrapper.style.padding = '0';
-            wrapper.style.border = 'none';
-
-            wrapper.style.minHeight = '0';
-            wrapper.style.maxHeight = '0';
-
-            e.currentTarget.textContent = 'Создать заявку';
-            e.currentTarget.addEventListener('click', e => openWrapper(e, wrapper));
-            e.currentTarget.removeEventListener('click', e => closeWrapper(e, wrapperToOpen));
-        }
-
-        e.currentTarget.removeEventListener('click', e => openWrapper(e, wrapper));
+        console.log('Удаляем слушатель');
+        e.currentTarget.removeEventListener('click', openWrapper, true);
         e.currentTarget.textContent = 'Закрыть создание заявки';
-        e.currentTarget.addEventListener('click', e => closeWrapper(e, wrapperToOpen));
+        e.currentTarget.addEventListener('click', closeWrapper, true);
         
-        wrapper.style.padding = '15px 25px';
-        wrapper.style.border = '1px solid #111';
+        wrapperElem.style.padding = '15px 25px';
+        wrapperElem.style.border = '1px solid #111';
 
-        wrapperToOpen.style.minHeight = 'max-content';
-        wrapperToOpen.style.maxHeight = 'max-content';
+        wrapperElem.style.minHeight = 'max-content';
+        wrapperElem.style.maxHeight = 'max-content';
     }
 
-    const wrapper = document.getElementById('create-wrapper');
+    function closeWrapper(e)
+    {
+        wrapperElem.style.padding = '0';
+        wrapperElem.style.border = 'none';
+
+        wrapperElem.style.minHeight = '0';
+        wrapperElem.style.maxHeight = '0';
+        
+        e.currentTarget.removeEventListener('click', closeWrapper, true);
+        e.currentTarget.textContent = 'Создать заявку';
+        e.currentTarget.addEventListener('click', openWrapper, true);
+    }
+
+    const wrapperElem = document.getElementById('create-wrapper');
     const openButton = document.getElementById('create-request');
 
-    openButton.addEventListener('click', e => openWrapper(e, wrapper));
+    openButton.addEventListener('click', openWrapper, true);
 })

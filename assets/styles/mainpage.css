@@ -154,6 +154,33 @@ article.last-dones
     padding: 50px 0;
 }
 
+span.counter
+{   
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+
+    transition: all .3s;
+
+    /* animation: 1s linear 0 infinite normal both paused counter; */
+}
+
+@keyframes counter
+{
+    from
+    {
+        font-size: 40px;
+    }
+    50%
+    {
+        font-size: 50px;
+    }
+    to
+    {
+        font-size: 40px;
+    }
+}
+
 div.last-dones-list
 {
     max-width: max-content;
